@@ -27,14 +27,59 @@ elif implement == 'langid':
     lang = doc[0]
     certainty = doc[1]
 
+
+
+##All language codes supported by langid.py
 lookup= {
-    'el': 'Greek',
-    'grc': 'Ancient Greek',
-    'la': 'Latin', 
-    'en': 'English', 
-    'fr': 'French', 
-    'de': 'German', 
-    'nl': 'Dutch'
+    'af': 'Afrikaans', 'am': 'Amharic', 
+    'an': 'Aragonese', 'ar': 'Arabic',
+    'as': 'Assamese', 'az': 'Azerbaijani',
+    'be': 'Belarusian', 'bg': 'Bulgarian',
+    'bn': 'Bengali', 'br': 'Breton',
+    'bs': 'Bosnian', 'ca': 'Catalan',
+    'cs': 'Czech', 'cy': 'Welsh',
+    'da': 'Danish', 'de': 'German',
+    'dz': 'Dzongkha', 'el': 'Greek',
+    'en': 'English', 'eo': 'Esperanto',
+    'es': 'Spanish', 'et': 'Estonian',
+    'eu': 'Basque', 'fa': 'Persian',
+    'fi': 'Finnish', 'fo': 'Faroese',
+    'fr': 'French', 'ga': 'Irish',
+    'gl': 'Galician', 'gu': 'Gujarati',
+    'he': 'Hebrew', 'hi': 'Hindi',
+    'hr': 'Croatian', 'ht': 'Haitian Creole',
+    'hu': 'Hungarian', 'hy': 'Armenian',
+    'id': 'Indonesian', 'is': 'Icelandic',
+    'it': 'Italian', 'ja': 'Japanese',
+    'jv': 'Javanese', 'ka': 'Georgian',
+    'kk': 'Kazakh', 'km': 'Central Khmer',
+    'kn': 'Kannada', 'ko': 'Korean',
+    'ku': 'Kurdish', 'ky': 'Kirghiz',
+    'la': 'Latin', 'lb': 'Luxembourgish',
+    'lo': 'Lao', 'lt': 'Lithuanian',
+    'lv': 'Latvian', 'mg': 'Malagasy',
+    'mk': 'Macedonian', 'ml': 'Malayalam',
+    'mn': 'Mongolian', 'mr': 'Marathi',
+    'ms': 'Malay', 'mt': 'Maltese',
+    'nb': 'Norwegian Bokmål', 'ne': 'Ndonga',
+    'nl': 'Dutch', 'nn': 'Norwegian Nynorsk',
+    'no': 'Norwegian', 'oc': 'Occitan',
+    'or': 'Oriya', 'pa': 'Panjabi',
+    'pl': 'Polish', 'ps': 'Pushto',
+    'pt': 'Portuguese', 'qu': 'Quechua',
+    'ro': 'Romanian', 'ru': 'Russian',
+    'rw': 'Kinyarwanda', 'se': 'Northern Sami',
+    'si': 'Sinhalese', 'sk': 'Slovak',
+    'sl': 'Slovenian', 'sq': 'Albanian',
+    'sr': 'Serbian', 'sv': 'Swedish',
+    'sw': 'Swahili', 'ta': 'Tamil',
+    'te': 'Telugu', 'th': 'Thai',
+    'tl': 'Tagalog', 'tr': 'Turkish',
+    'ug': 'Uighur', 'uk': 'Ukrainian',
+    'ur': 'Urdu', 'vi': 'Vietnamese',
+    'vo': 'Volapük', 'wa': 'Walloon',
+    'xh': 'Xhosa', 'zh': 'Chinese',
+    'zu': 'Zulu'
 }
 langString = lookup[lang]
 print(json.dumps({'languageCode':lang, 'language': langString, 'certainty':certainty}))
