@@ -51,7 +51,7 @@ for p in parse.ents:
     if p.label_ in labelLookup:
         labelToShow = labelLookup[p.label_]
     else:
-        labelToShow = 'Unspecified'
+        labelToShow = '#$#undefined#$#'
     total+=1
     subresult = {
         'text': p.text,
