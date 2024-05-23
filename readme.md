@@ -13,7 +13,7 @@ LATTE connector is a Virtual Python Environment that connects the LATTE web appl
     ```
     pip install -r requirements.txt
     ```
-
+- You'll need to remember where you installed the Python application. The full path to python.exe and the hostfiles folder is required for LATTE
 
 ## Configuration
 The LATTE connector does not require further configuration, but the LATTE web app needs to know the connector is installed and where it is located. For this it is important that you pass thedirectory of the LATTE connector and the exact location of the python-executable of the LATTE connector to the LATTE web app using the LATTE config.inc.php config file. 
