@@ -5,7 +5,7 @@ LATTE connector is a Virtual Python Environment that connects the LATTE web appl
 ## Installation
 - Requires an active Python installation. 
 - Download the LATTE connector to a folder on the same machine you run the LATTE web app.
-- Install a virtual environrment in a dedicated folder by using from a PowerShell window: 
+- Install a virtual environment in a dedicated folder by using from a PowerShell window: 
     `python -m venv . `
 - Activate this new virtual environment by typin `.\Scripts\activate` from within the same PowerShell window. The name of the folder you're in should show up in PowerShell.
 - In this folder copy the content you downloaded from the GitHub page. 
