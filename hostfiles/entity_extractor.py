@@ -34,7 +34,11 @@ lookupModel = {
 for key, value in config.items('Models'):
     lookupModel[key] = value
 
-usedModel = lookupModel[lang]
+#check if the model is available, otherwise fallback to english!
+if lang in lookupModel:
+    usedModel = lookupModel[lang]
+else:
+    usedModel = lookupModel['en']
 nlp = spacy.load(usedModel)
 parse = nlp(text)
 
