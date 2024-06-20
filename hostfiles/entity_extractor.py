@@ -39,7 +39,12 @@ if lang in lookupModel:
     usedModel = lookupModel[lang]
 else:
     usedModel = lookupModel['en']
-nlp = spacy.load(usedModel)
+#even if a model is available, it could be the user forgot to install it;
+#so fallback on the lg model which is installed by default. 
+try:
+    nlp = spacy.load(usedModel)
+except:
+    nlp = spacy.load('en_core_web_lg')
 parse = nlp(text)
 
 labelLookup = {
