@@ -11,7 +11,7 @@ import configparser
 ##read the config.ini file to extract additional languages: 
 scriptdir = os.path.dirname(os.path.abspath(__file__))
 config = configparser.ConfigParser()
-config.read(os.path.join(scriptdir, '../config.ini'))
+config.read(os.path.join(scriptdir, 'config.ini'))
 
 settings = {}
 for section in config.sections():
@@ -25,26 +25,20 @@ lang = text[1]
 text = text [0]
 lookupModel = {
     'el': 'el_core_news_md',
-    'en': 'en_core_web_lg', 
+    'en': 'en_core_web_md', 
     'fr': 'fr_core_news_md', 
     'de': 'de_core_news_md', 
-    'nl': 'nl_core_news_md'
+    'nl': 'nl_core_news_md', 
 }
 
 for key, value in config.items('Models'):
     lookupModel[key] = value
 
-#check if the model is available, otherwise fallback to english!
 if lang in lookupModel:
     usedModel = lookupModel[lang]
-else:
+else: 
     usedModel = lookupModel['en']
-#even if a model is available, it could be the user forgot to install it;
-#so fallback on the lg model which is installed by default. 
-try:
-    nlp = spacy.load(usedModel)
-except:
-    nlp = spacy.load('en_core_web_lg')
+nlp = spacy.load(usedModel)
 parse = nlp(text)
 
 labelLookup = {

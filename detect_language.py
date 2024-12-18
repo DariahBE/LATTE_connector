@@ -13,7 +13,7 @@ if implement == 'spacy':
     from spacy_langdetect import LanguageDetector
     def get_lang(nlp, name):
         return LanguageDetector()
-    nlp = spacy.load("en_core_web_sm", disable=['tokenizer', 'ner', 'textcat'])
+    nlp = spacy.load("en_core_web_md", disable=['tokenizer', 'ner', 'textcat'])
     Language.factory("language_detector", func=get_lang)
     nlp.add_pipe('language_detector', last=True)
     doc = nlp(text)
