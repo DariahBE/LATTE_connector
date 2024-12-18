@@ -1,3 +1,6 @@
+
+⚠️ This version (v1) is outdated. Please refer to the latest release (v2) for updated code and features.
+
 # LATTE connector
 
 LATTE connector is a Virtual Python Environment that connects the LATTE web application to powerfull Python models to recognize entities and return them to the user. This manual assumes Python is installed on your machine and that you hava access to PowerShell/Terminal. 
